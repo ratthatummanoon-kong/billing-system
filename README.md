@@ -26,8 +26,7 @@ This C++ program is a simple supermarket billing system that allows for admin an
 ```bash
 g++ billing_system.cpp -o billing_system
 
-
-Program Flow
+``` Program Flow
 1. Program Initialization
 START
 ├── Initialize cleanup function to delete database on exit (atexit)
