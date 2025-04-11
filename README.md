@@ -29,32 +29,33 @@ g++ billing_system.cpp -o billing_system
 
 ### Program Flow
 
-1. **Program Initialization**  
+```
+1. Program Initialization  
    START  
-   ├── Initialize cleanup function to delete database on exit (`atexit`)  
+   ├── Initialize cleanup function to delete database on exit (atexit)  
    ├── Create shopping object instance  
    └── Launch main menu  
 
-2. **Main Menu Navigation**  
+2. Main Menu Navigation  
    Main Menu  
    ├── Option 1: Administrator  
    │   ├── Login with credentials  
-   │   │   ├── Email: `admin.kong@gmail.com`  
-   │   │   └── Password: `admin1234`  
+   │   │   ├── Email: admin.kong@gmail.com  
+   │   │   └── Password: admin1234  
    │   └── If authenticated → Admin Menu  
    ├── Option 2: Buyer  
    │   └── Buyer Menu  
    └── Option 3: Exit Program  
        └── Trigger cleanup function  
 
-3. **Administrator Functions**  
+3. Administrator Functions  
    Admin Menu  
    ├── Option 1: Add Product  
    │   ├── Auto-generate product code  
    │   ├── Enter product name  
    │   ├── Enter product price  
    │   ├── Enter product discount  
-   │   └── Save to `database.txt`  
+   │   └── Save to database.txt  
    ├── Option 2: Modify Product  
    │   ├── Enter product code to modify  
    │   ├── Update product details  
@@ -70,7 +71,7 @@ g++ billing_system.cpp -o billing_system
    │   └── Rewrite database  
    └── Option 4: Back to Main Menu  
 
-4. **Buyer Functions**  
+4. Buyer Functions  
    Buyer Menu  
    ├── Option 1: Buy Product  
    │   ├── List available products  
@@ -87,10 +88,10 @@ g++ billing_system.cpp -o billing_system
    │   └── Return to Buyer Menu  
    └── Option 2: Back to Main Menu  
 
-5. **Data Management**  
+5. Data Management  
    File Operations  
-   ├── `database.txt`  
-   │   ├── Format: `[product code] [product name] [price] [discount]`  
+   ├── database.txt  
+   │   ├── Format: [product code] [product name] [price] [discount]  
    │   ├── Read Operations  
    │   │   ├── List products (list function)  
    │   │   └── Find specific product (edit, rem, receipt functions)  
@@ -99,12 +100,14 @@ g++ billing_system.cpp -o billing_system
    │       ├── Update database (edit function)  
    │       └── Remove product (rem function)  
    └── Program Termination  
-       └── Delete `database.txt` file (cleanup function)  
+       └── Delete database.txt file (cleanup function)  
 
-6. **Program Exit**  
+6. Program Exit  
    Termination Process  
    ├── User selects Exit from Main Menu  
    │   └── OR  
    ├── Program reaches end of execution  
    └── Cleanup function is called  
-       └── Delete `database.txt`  
+       └── Delete database.txt  
+```
+
