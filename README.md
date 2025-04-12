@@ -57,8 +57,14 @@ g++ billing_system.cpp -o billing_system
    │   ├── Enter product discount  
    │   └── Save to database.txt  
    ├── Option 2: Modify Product  
+   │   ├── Display all current products for reference  
    │   ├── Enter product code to modify  
-   │   ├── Update product details  
+   │   ├── Display current product details:  
+   │   │   ├── Current product code  
+   │   │   ├── Current product name  
+   │   │   ├── Current price  
+   │   │   └── Current discount  
+   │   ├── Enter new product details:  
    │   │   ├── New product code  
    │   │   ├── New product name  
    │   │   ├── New price  
