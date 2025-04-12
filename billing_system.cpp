@@ -193,7 +193,11 @@ void shopping::edit() {
     vector<float> all_prices;
     vector<float> all_discounts;
     
-    cout << "\n Modify the record";
+    // Show all products first for admin reference
+    cout << "\n\n All Current Products:";
+    list();  // Call the list function to display all products
+    
+    cout << "\n\n Modify the record";
     cout << "\n Product code: ";
     cin >> pkey;
     
@@ -204,6 +208,15 @@ void shopping::edit() {
         // First, read all products into vectors
         while (data >> pcode >> pname >> price >> dis) {
             if (pkey == pcode) {
+                // Display current product details before editing
+                cout << "\n\n Current Product Details:";
+                cout << "\n Product Code: " << pcode;
+                cout << "\n Product Name: " << pname;
+                cout << "\n Price: " << price;
+                cout << "\n Discount: " << dis << "%";
+                
+                // Get new product details
+                cout << "\n\n Enter New Details:";
                 cout << "\n Product new code: ";
                 cin >> c;
                 cout << "\n Name of the product: ";
